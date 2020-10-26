@@ -1,0 +1,81 @@
+.group-links {
+    li {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 20px 30px;
+        color: rgba(255, 255, 255, .4);
+        border-bottom: 1px solid rgba(255, 255, 255, .03);
+        cursor: pointer;
+
+        & i[class^="iconfont"] {
+            color: #00A3FF;
+            font-size: 24px;
+        }
+
+        span {
+            margin-left: 18px;
+            color: #fff;
+            font-weight: 300;
+            font-size: 15px;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            border-top: 1px solid #fff;
+            border-right: 1px solid #fff;
+            transform: rotate(45deg);
+            width: 8px;
+            height: 8px;
+            opacity: .2;
+        }
+    }
+}
+
+.form-ui {
+    padding: 0 30px;
+
+    .el-input__inner {
+        background: $input-color !important;
+        border: 1px solid $input-color !important;
+        color: #fff;
+
+        &::-webkit-input-placeholder {
+            color: rgba(255, 255, 255, .2);
+        }
+
+        &::-moz-placeholder {
+            color: rgba(255, 255, 255, .2);
+        }
+
+        &:-ms-input-placeholder {
+            color: rgba(255, 255, 255, .2);
+        }
+
+        &:-moz-placeholder {
+            color: rgba(255, 255, 255, .2);
+        }
+    }
+
+    .cap-btn {
+        position: absolute;
+        z-index: 2;
+        top: 4px;
+        right: 4px;
+        width: 100px;
+        height: 32px;
+        background-color: #34393f;
+        border-radius: 5px;
+        text-align: center;
+        line-height: 32px;
+        font-size: 12px;
+        color: #fff;
+        outline: none;
+        border: none;
+        cursor: pointer;
+    }
+}

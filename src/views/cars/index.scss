@@ -1,0 +1,40 @@
+.cars {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  bottom: 94px;
+
+  .cars-list {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 0 150px;
+  }
+
+  .swiper-button-disabled {
+    opacity: 1;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    box-sizing: border-box;
+    transform: translateY(-50%);
+    top: 50%;
+    margin: 0 40px;
+    width: 60px;
+    height: 100px;
+    border-radius: 100px;
+    box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.2);
+    background: #FFFFFF;
+    outline: none;
+
+    &:hover {
+      background-color: $bg-color;
+    }
+  }
+}
+
+.swiper-container {
+  overflow: visible !important;
+}
