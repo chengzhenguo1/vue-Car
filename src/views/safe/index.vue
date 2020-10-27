@@ -5,14 +5,14 @@
       <router-link to="/password" tag="li">
         <span>修改登录密码</span>
       </router-link>
-      <router-link to="/" tag="li">
+      <router-link to="/moneyPw" tag="li">
         <span>设置资金密码</span>
       </router-link>
-      <router-link to="/" tag="li">
+      <router-link to="/phone" tag="li">
         <span>绑定手机号</span>
       </router-link>
-      <router-link to="/" tag="li">
-        <span>绑定银行号</span>
+      <router-link to="/bankCard" tag="li">
+        <span>绑定银行卡</span>
       </router-link>
     </ul>
   </div>

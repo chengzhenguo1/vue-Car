@@ -1,17 +1,13 @@
 <template>
   <div>
-    <Title title="修改登录密码" />
+    <Title title="设置资金密码" />
     <el-form ref="form" class="form-ui" :model="passwordForm">
       <el-form-item>
-        <el-input v-model="passwordForm.old" placeholder="原始密码"></el-input>
-      </el-form-item>
-      <el-form-item>
-        <el-input v-model="passwordForm.new" placeholder="新密码"></el-input>
-      </el-form-item>
-      <el-form-item>
         <el-input
-          v-model="passwordForm.confirm"
-          placeholder="确认密码"
+          v-model.number="passwordForm.pw"
+          type="number"
+          maxlength="6"
+          placeholder="设置六位数的密码"
         ></el-input>
       </el-form-item>
       <el-form-item>
@@ -19,7 +15,7 @@
           v-model="passwordForm.captcha"
           placeholder="验证码"
         ></el-input>
-        <div class="cap-btn">获取验证码</div>
+        <Cap />
       </el-form-item>
       <el-form-item>
         <el-button type="primary">确定</el-button>
@@ -30,18 +26,18 @@
 
 <script>
 import Title from "@c/title";
+import Cap from "@c/cap";
 export default {
-  name: "Password",
+  name: "MoneyPw",
   components: {
-    Title
+    Title,
+    Cap
   },
   data() {
     return {
       passwordForm: {
         //修改密码表番
-        old: "",
-        new: "",
-        confirm: "",
+        pw: "",
         captcha: ""
       }
     };

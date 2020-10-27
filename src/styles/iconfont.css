@@ -1,10 +1,11 @@
 @font-face {
     font-family: "iconfont";
     src: url('./iconfont/iconfont.eot');
-    src: url('./iconfont/iconfont.eot#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('./iconfont/iconfont.woff') format('woff'), /* chrome, firefox */
-    url('./iconfont/iconfont.ttf') format('truetype')/* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+    src: url('./iconfont/iconfont.eot#iefix') format('embedded-opentype'), 
+    url('./iconfont/iconfont.woff') format('woff'),
+    url('./iconfont/iconfont.ttf') format('truetype')
 }
+
 
 .iconfont {
     font-family: "iconfont" !important;
@@ -12,6 +13,14 @@
     font-style: normal;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-huangguan:before {
+    content: "\e642";
+}
+
+.icon-jia:before {
+    content: "\e6a7";
 }
 
 .icon-cha:before {

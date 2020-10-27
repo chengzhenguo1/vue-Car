@@ -22,6 +22,28 @@ const routes = [
       path: "/password",
       name: "Password",
       component: () => import("../views/safe/password/index.vue")
+    },
+    {
+      path: "/moneyPw",
+      name: "MoneyPw",
+      component: () => import("../views/safe/money-pw/index.vue")
+    },
+    {
+      path: "/phone",
+      name: "Phone",
+      component: () => import("../views/safe/phone/index.vue")
+    }, {
+      path: "/bankCard",
+      name: "BankCard",
+      component: () => import("../views/safe/bank-card/index.vue")
+    }, {
+      path: "/info",
+      name: "Info",
+      component: () => import("../views/info/index.vue")
+    },{
+      path: "/member-lv",
+      name: "MemberLv",
+      component: () => import("../views/info/memberLv/index.vue")
     }]
   }
   // ,

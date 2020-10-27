@@ -11,7 +11,7 @@
       </div>
     </div>
     <ul class="group-links">
-      <router-link to="/index" tag="li">
+      <router-link to="/info" tag="li">
         <i class="iconfont icon-50"></i>
         <span>我的账户</span>
       </router-link>

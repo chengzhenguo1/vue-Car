@@ -1,0 +1,42 @@
+.card {
+    margin: 0 30px 25px 30px;
+
+    .upload,
+    .card-tpye {
+        display: flex;
+        height: 191px;
+        border-radius: 10px;
+    }
+
+    .upload {
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        border: 1px dashed #282d32;
+        background: rgba(40, 44, 49, 0.16);
+
+        .icon-jia {
+            font-size: 20px;
+            color: rgba(40, 45, 50, 0.82);
+        }
+    }
+
+    .card-tpye {
+        box-sizing: border-box;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 30px 0 46px 34px;
+        background: #a41d27;
+        color: #fff;
+        width: 100%;
+
+        .card-name {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .card-num {
+            font-size: 26px;
+        }
+    }
+}
