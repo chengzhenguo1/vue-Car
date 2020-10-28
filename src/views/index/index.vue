@@ -8,10 +8,12 @@
     <Navbar />
     <!-- 会员 -->
     <transition name="fade">
-      <div v-show="showUser" class="r-list">
+      <div v-show="showUser" class="r-list" id="r-list">
         <router-view />
       </div>
     </transition>
+    <!-- 遮罩层 -->
+    <div :class="{ mask: showUser }"></div>
   </div>
 </template>
 
@@ -35,10 +37,10 @@ export default {
     this.closeMenu(); //点击其他地方关闭右侧菜单
   },
   methods: {
-    closeMenu() {
-      const users = document.getElementById("users");
+    closeMenu(e) {
+      const rList = document.getElementById("r-list");
       document.addEventListener("mouseup", e => {
-        if (users && !users.contains(e.target) && this.$route.name != "Index") {
+        if (rList && !rList.contains(e.target) && this.$route.name != "Index") {
           this.$router.push({ name: "Index" });
         }
       });
@@ -48,6 +50,14 @@ export default {
 </script>
 
 <style lang="scss">
+.mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 408px;
+  z-index: 90;
+}
 .r-list {
   position: fixed;
   z-index: 99;
@@ -60,7 +70,7 @@ export default {
 }
 .fade-enter-active,
 .fade-leave-active {
-  transition: all .5s ease;
+  transition: all 0.5s ease;
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   // opacity: 0;
